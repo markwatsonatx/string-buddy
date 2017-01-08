@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>string-buddy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body onload="bodyLoaded();" onfocus="bodyFocused();">
+    <div class="container">
+      <div class="input row">
+        <textarea id="inputText" onkeyup="setOutput();">
+        </textarea>
+      </div>
+      <div class="tabs row">
+        <div data-plugin="plugin-json-formatting" class="tab" onclick="selectTab(this);">JSON</div>
+        <div data-plugin="plugin-base64-encoding" class="tab" onclick="selectTab(this);">Base64</div>
+        <div data-plugin="plugin-url-encoding" class="tab" onclick="selectTab(this);">URL</div>
+        <div data-plugin="plugin-date-formatting" class="tab" onclick="selectTab(this);">Date</div>
+      </div>
+      <div class="output row">
+        <pre id="outputText">
+        </pre>
+      </div>
+    </div>
+  </body>
+  <script>
+    require('./renderer.js');
+  </script>
+</html>

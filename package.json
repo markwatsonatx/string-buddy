@@ -1,0 +1,31 @@
+{
+  "name": "string-buddy",
+  "version": "0.0.1",
+  "description": "A developer's string buddy.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "keywords": [
+    "string",
+    "format",
+    "encode",
+    "decode",
+    "base64",
+    "url",
+    "date"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/markwatsonatx/string-buddy/issues"
+  },
+  "homepage": "https://github.com/markwatsonatx/string-buddy#readme",
+  "devDependencies": {
+    "electron": "^1.3.4"
+  }
+}
