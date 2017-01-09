@@ -1,3 +1,5 @@
+.DS_Store
 .idea
 *.iml
 node_modules
+string-buddy-darwin-x64

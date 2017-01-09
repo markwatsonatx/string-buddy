@@ -3,7 +3,7 @@ class UrlEncodingPlugin {
     constructor() {
     }
 
-    process(text, settings) {
+    process(text) {
         return [
             {
                 title: "Encoded",

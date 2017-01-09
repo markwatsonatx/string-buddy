@@ -3,7 +3,7 @@ class JsonFormattingPlugin {
     constructor() {
     }
 
-    process(text, settings) {
+    process(text) {
         let output;
         try {
             output = JSON.stringify(JSON.parse(text), null, 2)

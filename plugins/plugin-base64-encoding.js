@@ -3,7 +3,7 @@ class Base64EncodingPlugin {
     constructor() {
     }
 
-    process(text, settings) {
+    process(text) {
         let decoded;
         try {
             decoded = window.atob(text);

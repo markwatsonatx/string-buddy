@@ -5,7 +5,7 @@ class DateFormattingPlugin {
     constructor() {
     }
 
-    process(text, settings) {
+    process(text) {
         let m;
         try {
             let unixTime = Number(text);
@@ -26,31 +26,17 @@ class DateFormattingPlugin {
         return [
             {
                 title: "Unix Time (s)",
-                text: this.getUnixTime(m, false)
+                text: m ? m.unix() : 'Invalid'
             },
             {
                 title: "Unix Time (ms)",
-                text: this.getUnixTime(m, true)
+                text: m ? m.valueOf() : 'Invalid'
             },
             {
                 title: "Formatted",
                 text: m.format()
             }
         ];
-    }
-
-    getUnixTime(m, milliseconds) {
-        if (m) {
-            if (milliseconds) {
-                return m.valueOf();
-            }
-            else {
-                return m.unix();
-            }
-        }
-        else {
-            return 'Invalid';
-        }
     }
 }
 
