@@ -2,25 +2,28 @@ const {clipboard} = require('electron');
 
 let inputElement;
 let outputElement;
+let tabs;
 let tabPlugins = [];
 let selectedTabPlugin;
 
 function bodyLoaded() {
     inputElement = document.getElementById("inputText");
     outputElement = document.getElementById("outputText");
-    let tabs = document.getElementsByClassName("tab");
+    tabs = document.getElementsByClassName("tab");
     for (let tab of tabs) {
         tabPlugins.push({
             tab: tab,
             plugin: getPlugin(tab.getAttribute("data-plugin"))
         });
     }
-    //
-    inputElement.value = clipboard.readText('selection');
-    selectTab(tabs[0]);
+    initFromClipboard();
 }
 
 function bodyFocused() {
+    initFromClipboard();
+}
+
+function initFromClipboard() {
     inputElement.value = clipboard.readText('selection');
     if (tabs) {
         selectTab(tabs[0]);
