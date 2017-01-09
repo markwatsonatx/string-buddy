@@ -25,7 +25,7 @@ function bodyFocused() {
 
 function initFromClipboard() {
     inputElement.value = clipboard.readText('selection');
-    if (tabs) {
+    if (tabs && ! selectedTabPlugin) {
         selectTab(tabs[0]);
     }
 }

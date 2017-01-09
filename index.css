@@ -9,6 +9,15 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 pre {
     white-space: pre-wrap;       /* Since CSS 2.1 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -46,26 +55,20 @@ pre {
 
 .tabs {
     flex: 0 0 auto;
-    background-color: beige;
     cursor: pointer;
-    border: 1px solid darkblue;
 }
 
 .tab {
     box-sizing: border-box;
     width: 140px;
     float: left;
-    border-right: 1px solid darkgreen;
     padding: 10px;
 }
 
 .tab.selected {
-    background-color: darkblue;
-    color: white;
 }
 
 .output {
     flex: 1 1 auto;
-    background-color: beige;
     padding: 10px;
 }

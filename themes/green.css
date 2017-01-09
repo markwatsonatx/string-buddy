@@ -1,0 +1,15 @@
+.tabs {
+    color: #00e5e5;
+    background-color: black;
+    border-bottom: 1px solid #00e5e5;
+}
+
+.tab.selected {
+    background-color: #00e5e5;
+    color: black;
+}
+
+.output {
+    background-color: black;
+    color: #00f900;
+}

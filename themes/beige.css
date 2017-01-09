@@ -1,0 +1,16 @@
+.tabs {
+    color: black;
+    background-color: beige;
+    border-top: 1px solid #a8a897;
+    border-bottom: 1px solid #a8a897;
+}
+
+.tab.selected {
+    background-color: #a8a897;
+    color: black;
+}
+
+.output {
+    background-color: beige;
+    color: black;
+}
