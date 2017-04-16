@@ -28,6 +28,9 @@ function initFromClipboard() {
     if (tabs && ! selectedTabPlugin) {
         selectTab(tabs[0]);
     }
+    else {
+        setOutput();
+    }
 }
 
 function getPlugin(id) {
